@@ -73,7 +73,7 @@ function seisservosgraf
         p3 = p2 + L3*[cos(t2+t3+t4), sin(t2+t3+t4)];
 
         % Pinza (servo6 abre la U)
-        openA = deg2rad(angulos(6));
+        openA = deg2rad(90 - angulos(6));
         dirG  = [cos(t2+t3+t4), sin(t2+t3+t4)];
         orth  = [-dirG(2), dirG(1)];
         pA    = p3 + jawLen*(dirG*cos(openA) + orth*sin(openA));
